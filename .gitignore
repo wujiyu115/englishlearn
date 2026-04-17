@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Build artifacts
+dist/
+build/
+*.tsbuildinfo
+
+# SQLite databases
+*.db
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+logs/
+
+# Node / Bun
+node_modules/
+
+# Frontend cache
+.cache/
+.eslintcache
+coverage/
+*.lcov
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# Claude Code
+.claude/

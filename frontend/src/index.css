@@ -1,0 +1,95 @@
+/* frontend/src/index.css */
+/* NOTE: @import "tailwindcss" omitted — RSBuild uses rspack (not Vite),
+   so @tailwindcss/vite is incompatible. CSS variables below provide the
+   full design system without Tailwind utility classes. */
+
+:root {
+  --bg: #ffffff;
+  --bg-surface: #fafafa;
+  --bg-card: #ffffff;
+  --text-primary: #171717;
+  --text-secondary: #4d4d4d;
+  --text-muted: #808080;
+  --border-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  --border-light: rgb(235, 235, 235) 0px 0px 0px 1px;
+  --card-inner-ring: #fafafa;
+  --card-shadow:
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.04) 0px 2px 2px,
+    #fafafa 0px 0px 0px 1px;
+}
+
+.dark {
+  --bg: #000000;
+  --bg-surface: #0a0a0a;
+  --bg-card: #111111;
+  --text-primary: #ededed;
+  --text-secondary: #888888;
+  --text-muted: #555555;
+  --border-shadow: rgba(255, 255, 255, 0.08) 0px 0px 0px 1px;
+  --border-light: rgb(30, 30, 30) 0px 0px 0px 1px;
+  --card-inner-ring: #1a1a1a;
+  --card-shadow:
+    rgba(255, 255, 255, 0.08) 0px 0px 0px 1px,
+    rgba(255, 255, 255, 0.03) 0px 2px 2px,
+    #1a1a1a 0px 0px 0px 1px;
+}
+
+/* Accent colors — theme-invariant */
+:root, .dark {
+  --accent-xp: #0a72ef;
+  --accent-review: #ff5b4f;
+  --accent-league: #de1d8d;
+  --focus-ring: hsla(212, 100%, 48%, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: "Geist", Arial, sans-serif;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility classes */
+.card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--border-light);
+  transition: opacity 0.15s;
+}
+.btn-secondary:hover { opacity: 0.75; }
+
+.pill {
+  border-radius: 9999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
